@@ -14,7 +14,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect("mongodb://localhost:27017/clientDb", function(err, db) {
   if(!err) {
-    console.log("We are connected");
+    console.log("We are connected to mongo");
   }
 });
 
