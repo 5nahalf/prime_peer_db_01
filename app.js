@@ -10,14 +10,21 @@ var users = require('./routes/users');
 
 var app = express();
 
-var MongoClient = require('mongodb').MongoClient;
+var mongoose = require('mongoose');
 
-MongoClient.connect("mongodb://localhost:27017/clientDb", function(err, db) {
-  if(!err) {
-    console.log("We are connected to mongo");
+var mongoURI = "mongodb://localhost:27017/todoAPI";
+var MongoDB = mongoose.connect(mongoURI).connection;
+MongoDB.on('error', function (err) {
+  if (err) {
+    console.log('mongodb connection error', err);
+  } else {
+    console.log('mongodb connection successful');
   }
 });
 
+MongoDB.once('open', function () {
+  console.log('mongodb connection open');
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
