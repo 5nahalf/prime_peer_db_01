@@ -15,7 +15,7 @@ router.get('/', function(req, res, next){
 router.post('/', function(req, res, next){
     assignModel.create(req.body, function(err, post){
         if(err) return next(err);
-        res.json(assignModel);
+        res.json(post);
     });
 });
 //this is for the update code done not tested
