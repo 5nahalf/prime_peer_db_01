@@ -26,26 +26,12 @@ $(document).ready(function() {
 });
 function appendData(data){
     for (i = 0; i < data.length; i++){
-        $(".results").append("<div class='container'><p class='col-md-2'>Name: " + data[i].name + "</p><p class='col-md-2'>Score: " + data[i].score + "</p><button class='remove' id='" + data[i]._id + "'>Remove</button></div>");
+        $(".results").append("<ul class='row'><li class='col-md-4'>Name: " + data[i].name + "</li><li class='col-md-4'>Score: " + data[i].score + "</li><li class='col-md-4'>Completed: " + data[i].completed + "</li><button class='remove' id='" + data[i]._id + "'>Remove</button></ul>");
     }
 
 }
 
 
-//function removeName(){
-//    $.ajax({
-//        url: '/assignment',
-//        dataType: 'json',
-//        method: 'delete',
-//        success: function(res){
-//            console.log("I am deleting something");
-//
-//        },
-//        error: function(){
-//            console.log("wa wa wa waaaaa");
-//        }
-//    });
-//}
 
 function getData(){
     $(".results").empty();
