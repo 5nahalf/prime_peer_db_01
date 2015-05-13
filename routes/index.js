@@ -5,6 +5,7 @@ var assignModel = require('../models/assignment')
 
 router.get('/', function(req, res, next) {
   res.sendFile(path.resolve(__dirname, '../views/index.html'));
+
 });
 
 //this posts to the file done and tested aok
