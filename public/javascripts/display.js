@@ -26,7 +26,7 @@ $(document).ready(function() {
 });
 function appendData(data){
     for (i = 0; i < data.length; i++){
-        $(".results").append("<div class='row'><div class='col-md-4'>Name: " + data[i].name + "</div><div class='col-md-4'>Score: " + data[i].score + "</div><button class='remove' id='" + data[i]._id + "'>Remove</button></div>");
+        $(".results").append("<div class='container'><p class='col-md-2'>Name: " + data[i].name + "</p><p class='col-md-2'>Score: " + data[i].score + "</p><button class='remove' id='" + data[i]._id + "'>Remove</button></div>");
     }
 
 }
