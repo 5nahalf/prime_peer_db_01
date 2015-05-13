@@ -3,17 +3,18 @@
     <title>Something We dont know how to do...</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-<form method="post" class="container-fluid">
+<form method="post" class="container-fluid well">
+    <img src="http://www.fancyicons.com/download/?id=3343&t=png&s=256" width="100" height="100">
     <label for="name">Name</label>
     <input name="name" id="name" type="text">
     <br />
     <label for="score">Score</label>
-    <input name="score" id="score" type="text">
+    <input name="score" class="validate" id="score" type="text">
     <br />
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="valid()">
 </form>
 <div class="results container-fluid">
 

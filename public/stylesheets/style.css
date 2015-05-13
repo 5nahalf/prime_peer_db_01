@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+p{
+  display: inline-block;
+}
+.container-fluid{
+  padding: 10px;
+}
+img {
+  float: right;
+}

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 //this posts to the file done and tested aok
 router.post('/', function(req, res, next){
   assignModel.create(req.body, function(err, post){
-    if(err) return next(err);
+
     res.sendFile(path.resolve(__dirname, '../views/index.html'));
   });
 });
